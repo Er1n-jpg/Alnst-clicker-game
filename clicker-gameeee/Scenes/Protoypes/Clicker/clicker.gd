@@ -11,6 +11,7 @@ func _ready() -> void:
 	load_data()
 	update_label_text()
 	start_time = Time.get_ticks_msec()
+	$AudioStreamPlayer.play()
 	
 func _process(delta):
 	var currentime = Time.get_ticks_msec()	
@@ -48,3 +49,5 @@ func load_data():
 func delete_save_data():
 	ivans = 0
 	
+func _on_button_2_pressed() -> void:
+	delete_save_data()

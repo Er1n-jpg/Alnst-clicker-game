@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbvshs0w8jeam"
+path="res://.godot/imported/Black Sorrow Instrumental - ALIEN STAGE.mp3-e8eb64c99861ff2c5f535807d4107f67.mp3str"
+
+[deps]
+
+source_file="res://Music/Black Sorrow Instrumental - ALIEN STAGE.mp3"
+dest_files=["res://.godot/imported/Black Sorrow Instrumental - ALIEN STAGE.mp3-e8eb64c99861ff2c5f535807d4107f67.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

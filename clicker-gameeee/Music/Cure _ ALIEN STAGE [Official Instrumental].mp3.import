@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cchdt2ajjkek4"
+path="res://.godot/imported/Cure _ ALIEN STAGE [Official Instrumental].mp3-a657f28064a7ef0c875b1b2a33e12d06.mp3str"
+
+[deps]
+
+source_file="res://Music/Cure _ ALIEN STAGE [Official Instrumental].mp3"
+dest_files=["res://.godot/imported/Cure _ ALIEN STAGE [Official Instrumental].mp3-a657f28064a7ef0c875b1b2a33e12d06.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbbrnf47hpsb8"
+path="res://.godot/imported/R O U N D 6 ｜ Alien Stage.mp3-33262e7648a6aeb5deaadd0481c5cd41.mp3str"
+
+[deps]
+
+source_file="res://Music/R O U N D 6 ｜ Alien Stage.mp3"
+dest_files=["res://.godot/imported/R O U N D 6 ｜ Alien Stage.mp3-33262e7648a6aeb5deaadd0481c5cd41.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

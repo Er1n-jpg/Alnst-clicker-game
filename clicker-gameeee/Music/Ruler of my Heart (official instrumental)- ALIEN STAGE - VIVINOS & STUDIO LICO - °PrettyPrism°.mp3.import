@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfad6fpw7xg80"
+path="res://.godot/imported/Ruler of my Heart (official instrumental)- ALIEN STAGE - VIVINOS & STUDIO LICO - °PrettyPrism°.mp3-0f42f8b46ce81bd5e3cc8c66e699bb3b.mp3str"
+
+[deps]
+
+source_file="res://Music/Ruler of my Heart (official instrumental)- ALIEN STAGE - VIVINOS & STUDIO LICO - °PrettyPrism°.mp3"
+dest_files=["res://.godot/imported/Ruler of my Heart (official instrumental)- ALIEN STAGE - VIVINOS & STUDIO LICO - °PrettyPrism°.mp3-0f42f8b46ce81bd5e3cc8c66e699bb3b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
