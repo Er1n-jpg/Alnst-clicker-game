@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4wq51pw6ye8q" path="res://Scenes/Protoypes/Clicker/clicker.gd" id="1_dxrq1"]
 
-[node name="Clicker" type="Control" node_paths=PackedStringArray("label")]
+[node name="Clicker" type="Control" node_paths=PackedStringArray("label") groups=["clicker"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,11 +44,4 @@ text = "Ivans count: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="save" type="Button" parent="."]
-layout_mode = 1
-offset_right = 147.0
-offset_bottom = 55.0
-text = "Save"
-
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="save" to="." method="_on_save_pressed"]
