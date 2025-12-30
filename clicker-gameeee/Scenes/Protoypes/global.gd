@@ -12,3 +12,6 @@ var guitar : bool = false
 var multiplierbool : bool = false 
 var mimohatbool : bool = false
 var lookatmyfit : bool = false
+
+func update_value(newivans):
+	ivans = newivans

@@ -10,10 +10,10 @@
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_b6l8n"]
 stream_count = 5
-stream_0 = ExtResource("2_6habc")
+stream_0 = ExtResource("4_8wif3")
 stream_1 = ExtResource("3_gvfll")
-stream_2 = ExtResource("4_8wif3")
-stream_3 = ExtResource("5_3eg1w")
+stream_2 = ExtResource("5_3eg1w")
+stream_3 = ExtResource("2_6habc")
 stream_4 = ExtResource("6_1p3lt")
 
 [node name="Clicker" type="Control" node_paths=PackedStringArray("label") groups=["clicker"]]
