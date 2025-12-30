@@ -69,10 +69,27 @@ stream = SubResource("AudioStreamPlaylist_b6l8n")
 volume_db = 0.125
 script = ExtResource("7_vnmik")
 
-[node name="Label2" type="Label" parent="."]
+[node name="Now playing" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 28.0
+offset_top = 563.0
+offset_right = 321.0
+offset_bottom = 637.0
+text = "Now playing..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SHop" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -121.0
+offset_right = 3.0
+offset_bottom = 53.0
+grow_horizontal = 0
+text = "Shop"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="SHop" to="." method="_on_s_hop_pressed"]

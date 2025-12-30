@@ -1,0 +1,136 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgacjwr2pw5tm"]
+
+[ext_resource type="Script" uid="uid://dencask1onqcr" path="res://Scenes/Protoypes/shop.gd" id="1_84san"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = -2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_84san")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 50
+text = "Welcome to the shop!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mizi plush" type="Button" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 120.0
+offset_right = 354.0
+offset_bottom = 197.0
+text = "Mizi plush"
+
+[node name="till plush" type="Button" parent="."]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 0
+offset_left = 444.0
+offset_top = 119.0
+offset_right = 710.0
+offset_bottom = 196.0
+text = "Till plush
+"
+
+[node name="Sua plush" type="Button" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 238.0
+offset_right = 356.0
+offset_bottom = 315.0
+text = "Sua plush"
+
+[node name="luka plush" type="Button" parent="."]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 0
+offset_left = 447.0
+offset_top = 234.0
+offset_right = 713.0
+offset_bottom = 311.0
+text = "Luka plush
+"
+
+[node name="Hyuna plush" type="Button" parent="."]
+layout_mode = 0
+offset_left = 803.0
+offset_top = 117.0
+offset_right = 1069.0
+offset_bottom = 194.0
+text = "Hyuna plush"
+
+[node name="outfit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 232.0
+offset_right = 1070.0
+offset_bottom = 309.0
+text = "Omg new outfit
+"
+
+[node name="guitar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 358.0
+offset_right = 355.0
+offset_bottom = 435.0
+text = "Guitar??? (Swag option)"
+
+[node name="diet coke" type="Button" parent="."]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 0
+offset_left = 448.0
+offset_top = 358.0
+offset_right = 714.0
+offset_bottom = 435.0
+text = "Ivan gets a diet coke"
+
+[node name="multiplier" type="Button" parent="."]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 0
+offset_left = 448.0
+offset_top = 480.0
+offset_right = 714.0
+offset_bottom = 557.0
+text = "Ivan multiplier (x2) can stack"
+
+[node name="mimo hat" type="Button" parent="."]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 485.0
+offset_right = 357.0
+offset_bottom = 562.0
+text = "Ivan gets a mimo hat"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_right = 143.0
+offset_bottom = 51.0
+text = "Back:("
+
+[connection signal="pressed" from="Mizi plush" to="." method="_on_mizi_plush_pressed"]
+[connection signal="pressed" from="till plush" to="." method="_on_till_plush_pressed"]
+[connection signal="pressed" from="Sua plush" to="." method="_on_sua_plush_pressed"]
+[connection signal="pressed" from="luka plush" to="." method="_on_luka_plush_pressed"]
+[connection signal="pressed" from="Hyuna plush" to="." method="_on_hyuna_plush_pressed"]
+[connection signal="pressed" from="outfit" to="." method="_on_outfit_pressed"]
+[connection signal="pressed" from="guitar" to="." method="_on_guitar_pressed"]
+[connection signal="pressed" from="diet coke" to="." method="_on_diet_coke_pressed"]
+[connection signal="pressed" from="multiplier" to="." method="_on_multiplier_pressed"]
+[connection signal="pressed" from="mimo hat" to="." method="_on_mimo_hat_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

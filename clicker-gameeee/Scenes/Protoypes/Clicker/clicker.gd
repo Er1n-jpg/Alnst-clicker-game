@@ -3,9 +3,11 @@ extends Control
 var save_path = "user://variablesave"
 @export var label = Label
 var start_time: int = 0
+@onready var playlabel = $"Now playing"
+@export var audio_player: AudioStreamPlayer
 
 
-var ivans: int = 0
+var ivans: int = Global.ivans
 
 func _ready() -> void:
 	load_data()
@@ -23,6 +25,7 @@ func _process(delta):
 func create_ivans() -> void:
 	ivans += 1
 	update_label_text()
+	print(ivans)
 
 func update_label_text() -> void:
 	label.text = "Ivans count: %s" %ivans
@@ -32,6 +35,7 @@ func _on_button_pressed() -> void:
 	
 func _on_save_pressed() -> void:
 	save()
+
 
 
 func save():
@@ -51,3 +55,17 @@ func delete_save_data():
 	
 func _on_button_2_pressed() -> void:
 	delete_save_data()
+	
+func get_audio_file() -> String:
+	if audio_player.stream:
+		return audio_player.stream.resource_path
+	else:
+		return "No audio loaded"
+	
+
+func update_song_label() -> void:
+	playlabel.text = get_audio_file()
+	
+
+func _on_s_hop_pressed() -> void:
+	get_tree().change_scene_to_file('res://Scenes/Protoypes/shop.tscn')
