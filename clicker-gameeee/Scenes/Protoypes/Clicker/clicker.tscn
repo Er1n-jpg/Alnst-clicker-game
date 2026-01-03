@@ -1,14 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://bp5jt0i82evc6"]
+[gd_scene load_steps=24 format=3 uid="uid://bp5jt0i82evc6"]
 
 [ext_resource type="Script" uid="uid://4wq51pw6ye8q" path="res://Scenes/Protoypes/Clicker/clicker.gd" id="1_dxrq1"]
 [ext_resource type="AudioStream" uid="uid://cchdt2ajjkek4" path="res://Music/Cure _ ALIEN STAGE [Official Instrumental].mp3" id="2_6habc"]
+[ext_resource type="Texture2D" uid="uid://u0vvqx15l3xe" path="res://images/Untitled162_20260102020105.png" id="2_agunu"]
+[ext_resource type="Texture2D" uid="uid://dly7jvocwkef4" path="res://images/Untitled161_20251231175230.png" id="2_b6l8n"]
+[ext_resource type="FontFile" uid="uid://cfahp5trg3ag2" path="res://fonts/Slow Play.ttf" id="2_gvfll"]
+[ext_resource type="Texture2D" uid="uid://bfaybuub4rl5" path="res://images/Untitled161_20251231025405.png" id="3_agunu"]
 [ext_resource type="AudioStream" uid="uid://c5xbu1jngu07m" path="res://Music/BLINK GONE Official Instrumental - ALIEN STAGE.mp3" id="3_gvfll"]
+[ext_resource type="Script" uid="uid://iq7l51j83bqg" path="res://Scenes/Protoypes/Clicker/texture_rect.gd" id="3_hxwby"]
 [ext_resource type="AudioStream" uid="uid://cbvshs0w8jeam" path="res://Music/Black Sorrow Instrumental - ALIEN STAGE.mp3" id="4_8wif3"]
 [ext_resource type="AudioStream" uid="uid://dfaolsjlpgycf" path="res://Music/My Clematis _ ALIEN STAGE [Official Instrumental].mp3" id="5_3eg1w"]
 [ext_resource type="AudioStream" uid="uid://cfad6fpw7xg80" path="res://Music/Ruler of my Heart (official instrumental)- ALIEN STAGE - VIVINOS & STUDIO LICO - °PrettyPrism°.mp3" id="6_1p3lt"]
+[ext_resource type="Texture2D" uid="uid://dj66iyx4l54t2" path="res://images/Untitled161_20260102014908.png" id="6_j6ndd"]
+[ext_resource type="Texture2D" uid="uid://62wwpbobdmi8" path="res://images/Untitled161_20260102014859.png" id="6_rcm5u"]
+[ext_resource type="Texture2D" uid="uid://c1ph1lutlgx4" path="res://images/Untitled design (13).png" id="7_agunu"]
+[ext_resource type="Texture2D" uid="uid://c7vl5lhbdjciy" path="res://images/Untitled161_20260102014840.png" id="7_hxwby"]
+[ext_resource type="Texture2D" uid="uid://dw5retf147pka" path="res://images/Untitled161_20260102014834.png" id="7_pf16t"]
+[ext_resource type="Texture2D" uid="uid://b0o1d0qgj7qgn" path="res://images/Untitled161_20260102014849.png" id="7_vcgbd"]
 [ext_resource type="Script" uid="uid://ddyfyhe54mh84" path="res://Scenes/Protoypes/Clicker/audio_stream_player.gd" id="7_vnmik"]
+[ext_resource type="Texture2D" uid="uid://drl1gchhlmb4g" path="res://images/Untitled161_20260102014829.png" id="8_bdohb"]
+[ext_resource type="Texture2D" uid="uid://dbmet6qi2l3xy" path="res://images/Untitled161_20260102014818.png" id="12_dxpir"]
+[ext_resource type="Texture2D" uid="uid://jx828fohmba8" path="res://images/Untitled164_20260102021158.png" id="13_j6ndd"]
+
+[sub_resource type="Theme" id="Theme_vcgbd"]
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_b6l8n"]
+shuffle = true
+loop = false
 stream_count = 5
 stream_0 = ExtResource("4_8wif3")
 stream_1 = ExtResource("3_gvfll")
@@ -21,14 +39,28 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 4.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_dxrq1")
 label = NodePath("Label")
+metadata/_edit_horizontal_guides_ = [-35.0]
 
-[node name="Button" type="Button" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 1153.0
+offset_bottom = 657.0
+texture = ExtResource("2_agunu")
+script = ExtResource("3_hxwby")
+
+[node name="Button" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(320, 80)
 layout_mode = 1
 anchors_preset = 8
@@ -36,59 +68,139 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -215.0
-offset_top = -45.0
-offset_right = 237.0
-offset_bottom = 35.0
+offset_left = -291.0
+offset_top = -222.0
+offset_right = 378.0
+offset_bottom = 409.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Click here!"
+texture_normal = ExtResource("2_b6l8n")
+texture_pressed = ExtResource("3_agunu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="sua plush" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 0
+offset_left = -23.0
+offset_top = -63.0
+offset_right = 683.0
+offset_bottom = 679.0
+texture = ExtResource("6_rcm5u")
+expand_mode = 1
+
+[node name="luka plush" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 0
+offset_left = -97.0
+offset_top = -184.0
+offset_right = 734.0
+offset_bottom = 751.0
+texture = ExtResource("7_pf16t")
+expand_mode = 1
+
+[node name="hyuna plush" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 0
+offset_left = -91.0
+offset_top = -133.0
+offset_right = 730.0
+offset_bottom = 714.0
+texture = ExtResource("8_bdohb")
+expand_mode = 1
+
+[node name="Miziplush" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 0
+offset_left = -54.0
+offset_top = -79.0
+offset_right = 693.0
+offset_bottom = 675.0
+texture = ExtResource("7_vcgbd")
+expand_mode = 1
+
+[node name="till plush" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 0
+offset_left = -123.0
+offset_top = -149.0
+offset_right = 746.0
+offset_bottom = 723.0
+texture = ExtResource("7_hxwby")
+expand_mode = 1
+
+[node name="mimo hat" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = -12.0
+offset_right = 662.0
+offset_bottom = 579.0
+texture = ExtResource("6_j6ndd")
+expand_mode = 1
+
+[node name="guitar" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 572.0
+offset_bottom = 567.0
+texture = ExtResource("12_dxpir")
+expand_mode = 1
+
+[node name="diet coke" type="TextureRect" parent="Button"]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = 444.0
+offset_right = 233.0
+offset_bottom = 544.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 1.0
-offset_bottom = 80.0
+offset_left = -44.0
+offset_top = -2.0
+offset_right = 30.0
+offset_bottom = 161.0
 grow_horizontal = 2
 theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("2_gvfll")
+theme_override_font_sizes/font_size = 60
 text = "Ivans count: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 101.0
-offset_bottom = 42.0
-text = "Reset"
+offset_left = -4.0
+offset_right = 121.0
+offset_bottom = 122.0
+theme = SubResource("Theme_vcgbd")
+texture_normal = ExtResource("7_agunu")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPlaylist_b6l8n")
-volume_db = 0.125
+volume_db = 0.01
 script = ExtResource("7_vnmik")
 
-[node name="Now playing" type="Label" parent="."]
-layout_mode = 0
-offset_left = 28.0
-offset_top = 563.0
-offset_right = 321.0
-offset_bottom = 637.0
-text = "Now playing..."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="SHop" type="Button" parent="."]
+[node name="SHop" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -121.0
-offset_right = 3.0
-offset_bottom = 53.0
+offset_left = -153.0
+offset_top = -1.0
+offset_right = -5.0
+offset_bottom = 149.0
 grow_horizontal = 0
-text = "Shop"
+texture_normal = ExtResource("13_j6ndd")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

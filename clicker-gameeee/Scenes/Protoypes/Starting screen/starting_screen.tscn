@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bg54xd1y6hdq7"]
+[gd_scene load_steps=6 format=3 uid="uid://bg54xd1y6hdq7"]
 
 [ext_resource type="Script" uid="uid://53tnrarr4hm4" path="res://Scenes/Protoypes/Starting screen/starting_screen.gd" id="1_dyuuy"]
+[ext_resource type="FontFile" uid="uid://c6riqnnqwhe1v" path="res://fonts/Slow Play.otf" id="2_a0xpd"]
+[ext_resource type="Texture2D" uid="uid://x4vxv2u628k5" path="res://images/Untitled165_20260102023600.png" id="2_knuv2"]
+[ext_resource type="Script" uid="uid://b6u47e3ggs0n1" path="res://Scenes/Protoypes/Starting screen/texture_rect.gd" id="3_1u5yi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1u5yi"]
+bg_color = Color(0.44239664, 0.6447766, 0.6335111, 1)
 
 [node name="Starting screen" type="Control" groups=["mainscreenn"]]
 layout_mode = 3
@@ -10,6 +16,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dyuuy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 647.0
+texture = ExtResource("2_knuv2")
+script = ExtResource("3_1u5yi")
 
 [node name="load" type="Button" parent="."]
 custom_minimum_size = Vector2(400, 100)
@@ -25,7 +38,9 @@ offset_right = 217.5
 offset_bottom = 70.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_a0xpd")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1u5yi")
 text = "Play!"
 
 [node name="Label" type="Label" parent="."]
@@ -35,7 +50,9 @@ anchor_right = 1.0
 offset_bottom = 165.0
 grow_horizontal = 2
 theme_type_variation = &"HeaderLarge"
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_a0xpd")
+theme_override_font_sizes/font_size = 60
 text = "Click that ivan!!"
 horizontal_alignment = 1
 vertical_alignment = 1
