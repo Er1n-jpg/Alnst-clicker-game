@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bg54xd1y6hdq7"]
+[gd_scene load_steps=9 format=3 uid="uid://bg54xd1y6hdq7"]
 
 [ext_resource type="Script" uid="uid://53tnrarr4hm4" path="res://Scenes/Protoypes/Starting screen/starting_screen.gd" id="1_dyuuy"]
 [ext_resource type="FontFile" uid="uid://c6riqnnqwhe1v" path="res://fonts/Slow Play.otf" id="2_a0xpd"]
 [ext_resource type="Texture2D" uid="uid://x4vxv2u628k5" path="res://images/Untitled165_20260102023600.png" id="2_knuv2"]
 [ext_resource type="Script" uid="uid://b6u47e3ggs0n1" path="res://Scenes/Protoypes/Starting screen/texture_rect.gd" id="3_1u5yi"]
+[ext_resource type="Texture2D" uid="uid://xlxo4ee8x761" path="res://images/Untitled166_20260104015924.png" id="5_5isxl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1u5yi"]
 bg_color = Color(0.44239664, 0.6447766, 0.6335111, 1)
@@ -12,12 +13,19 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgppl"]
+bg_color = Color(0.057241365, 0.45498687, 0.4524951, 0.40392157)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5isxl"]
 bg_color = Color(0.38668707, 0.57880783, 0.5714765, 1)
-border_width_left = 40
-border_width_top = 40
-border_width_right = 40
-border_width_bottom = 40
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [node name="Starting screen" type="Control" groups=["mainscreenn"]]
 layout_mode = 3
@@ -30,10 +38,19 @@ script = ExtResource("1_dyuuy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 647.0
+offset_right = 1152.0
+offset_bottom = 648.0
 texture = ExtResource("2_knuv2")
 script = ExtResource("3_1u5yi")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 56.0
+offset_right = 1426.0
+offset_bottom = 909.0
+texture = ExtResource("5_5isxl")
+expand_mode = 1
 
 [node name="load" type="Button" parent="."]
 custom_minimum_size = Vector2(400, 100)
@@ -52,6 +69,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_a0xpd")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_1u5yi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dgppl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5isxl")
 text = "Play!"
 
@@ -59,6 +77,7 @@ text = "Play!"
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
+offset_right = 73.0
 offset_bottom = 165.0
 grow_horizontal = 2
 theme_type_variation = &"HeaderLarge"
