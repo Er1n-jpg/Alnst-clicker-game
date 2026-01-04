@@ -78,17 +78,7 @@ func mimoupdate(miiimohat):
 func outfitupdates(newoutfit):
 	lookatmyfit = newoutfit
 
-func sunkencostfallacy():
-	ivans = 0
-	miziplush = false
-	tillplush = false
-	suaplush = false
-	lukaplush = false
-	hyunaplush = false
-	guitar = false
-	dietcoke = false
-	multiplier = 1
-	lookatmyfit = false
-	mimohatbool = false
+func updatemultiplier(newmultiplier):
+	newmultiplier = multiplier
 
 		

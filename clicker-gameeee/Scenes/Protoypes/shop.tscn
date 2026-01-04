@@ -1,35 +1,90 @@
-[gd_scene load_steps=13 format=3 uid="uid://dgacjwr2pw5tm"]
+[gd_scene load_steps=14 format=3 uid="uid://dgacjwr2pw5tm"]
 
 [ext_resource type="Script" uid="uid://dencask1onqcr" path="res://Scenes/Protoypes/shop.gd" id="1_84san"]
 [ext_resource type="FontFile" uid="uid://cfahp5trg3ag2" path="res://fonts/Slow Play.ttf" id="2_apc2c"]
 [ext_resource type="FontFile" uid="uid://c6riqnnqwhe1v" path="res://fonts/Slow Play.otf" id="3_3ekjp"]
+[ext_resource type="Texture2D" uid="uid://w87067o3p1qf" path="res://images/Untitled166_20260104013451.png" id="4_3ekjp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apc2c"]
 bg_color = Color(0.409449, 0.6516214, 0.63954014, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.47788018, 0.47788012, 0.47788012, 0.6)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ekjp"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6rmv"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7722"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edw7u"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f87y3"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44u2s"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njm7i"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5ji8"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
+shadow_size = 10
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -66,6 +121,7 @@ offset_left = 88.0
 offset_top = 120.0
 offset_right = 354.0
 offset_bottom = 197.0
+theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_apc2c")
 text = "Mizi plush"
 
@@ -76,6 +132,8 @@ offset_left = 444.0
 offset_top = 119.0
 offset_right = 710.0
 offset_bottom = 196.0
+theme_override_fonts/font = ExtResource("2_apc2c")
+theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxFlat_3ekjp")
 text = "Till plush
 "
@@ -86,6 +144,7 @@ offset_left = 90.0
 offset_top = 238.0
 offset_right = 356.0
 offset_bottom = 315.0
+theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_o6rmv")
 text = "Sua plush"
 
@@ -96,6 +155,7 @@ offset_left = 447.0
 offset_top = 234.0
 offset_right = 713.0
 offset_bottom = 311.0
+theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_i7722")
 text = "Luka plush
 "
@@ -106,6 +166,7 @@ offset_left = 803.0
 offset_top = 117.0
 offset_right = 1069.0
 offset_bottom = 194.0
+theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_edw7u")
 text = "Hyuna plush"
 
@@ -124,6 +185,7 @@ offset_left = 89.0
 offset_top = 358.0
 offset_right = 355.0
 offset_bottom = 435.0
+theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_f87y3")
 text = "Guitar??? (Swag option)"
 
@@ -134,6 +196,7 @@ offset_left = 448.0
 offset_top = 358.0
 offset_right = 714.0
 offset_bottom = 435.0
+theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_44u2s")
 text = "Ivan gets a diet coke"
 
@@ -144,6 +207,7 @@ offset_left = 448.0
 offset_top = 480.0
 offset_right = 714.0
 offset_bottom = 557.0
+theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_njm7i")
 text = "Ivan multiplier (x2) can stack"
 
@@ -153,16 +217,26 @@ offset_left = 91.0
 offset_top = 485.0
 offset_right = 357.0
 offset_bottom = 562.0
+theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_l5ji8")
 text = "Ivan gets a mimo hat"
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
-offset_right = 143.0
-offset_bottom = 51.0
+offset_right = 161.0
+offset_bottom = 59.0
 theme_override_fonts/font = ExtResource("3_3ekjp")
 theme_override_font_sizes/font_size = 20
 text = "Back :("
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 739.0
+offset_top = 308.0
+offset_right = 1171.0
+offset_bottom = 648.0
+texture = ExtResource("4_3ekjp")
+expand_mode = 1
 
 [connection signal="mouse_entered" from="Mizi plush" to="." method="_on_mizi_plush_mouse_entered"]
 [connection signal="mouse_exited" from="Mizi plush" to="." method="_on_mizi_plush_mouse_exited"]

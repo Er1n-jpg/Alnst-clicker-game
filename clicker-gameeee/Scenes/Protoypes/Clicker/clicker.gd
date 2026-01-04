@@ -57,10 +57,6 @@ func create_ivans() -> void:
 	lastvar = ivans
 	update_label_text()
 
-		
-	
-	
-
 func update_label_text() -> void:
 	label.text = "Ivans count: %s" %ivans
 	
@@ -69,7 +65,12 @@ func _on_button_pressed() -> void:
 
 	
 func _on_button_2_pressed() -> void:
-	Global.sunkencostfallacy()
+	ivans = 0
+	Global.update_accessoryvalue(false,false,false,false,false)
+	Global.guitarupdate(false)
+	Global.mimoupdate(false)
+	Global.outfitupdates(false)
+	Global.updatemultiplier(1)
 	Global.update_value(ivans)	
 
 func _on_s_hop_pressed() -> void:
@@ -78,9 +79,6 @@ func _on_s_hop_pressed() -> void:
 func manualrefresh():
 	if lastvar != Global.ivans:
 		lastvar = Global.ivans
-
-
-
 
 func _on_letter_pressed() -> void:
 	get_tree().change_scene_to_file('res://Scenes/Protoypes/letter.tscn')
