@@ -1,17 +1,65 @@
-[gd_scene format=3 uid="uid://b0yxfaaoqwfjs"]
+[gd_scene load_steps=3 format=3 uid="uid://b0yxfaaoqwfjs"]
+
+[ext_resource type="Script" uid="uid://bl2hl6i44gyjd" path="res://Scenes/Protoypes/leaderboard.gd" id="1_6fon2"]
+[ext_resource type="Script" uid="uid://b4ki30wbot7y" path="res://Scenes/Protoypes/popup.gd" id="2_5wvxi"]
 
 [node name="Leaderboard" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -1.0
+offset_right = -9.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6fon2")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
+offset_top = 3.0
 offset_right = 1163.0
-offset_bottom = 79.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 50
 text = "Leaderboard!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Popup" type="Popup" parent="."]
+oversampling_override = 1.0
+mode = 3
+size = Vector2i(1152, 648)
+visible = true
+script = ExtResource("2_5wvxi")
+
+[node name="LineEdit" type="LineEdit" parent="Popup"]
+offset_left = 428.0
+offset_top = 275.0
+offset_right = 748.0
+offset_bottom = 372.0
+placeholder_text = "Name"
+alignment = 1
+
+[node name="Label" type="Label" parent="Popup/LineEdit"]
+layout_mode = 0
+offset_left = -424.0
+offset_top = -265.0
+offset_right = 726.0
+offset_bottom = -148.0
+theme_override_font_sizes/font_size = 60
+text = "Enter your name!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Closebutton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 183.0
+offset_bottom = 109.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="Closebutton" to="." method="_on_closebutton_pressed"]

@@ -119,6 +119,7 @@ func _on_guitar_pressed() -> void:
 		guitar = true
 		ivans -= 200
 		Global.update_value(ivans)
+		Global.guitarupdate(guitar)
 	else:
 		getaguitar.text = "Not enough :("
 		await get_tree().create_timer(2.0).timeout
@@ -153,6 +154,7 @@ func _on_mimo_hat_pressed() -> void:
 		mimohatbool = true
 		ivans -= 350
 		Global.update_value(ivans)
+		Global.mimoupdate(mimohatbool)
 		
 	else:
 		mimohat.text = "no swag for you"

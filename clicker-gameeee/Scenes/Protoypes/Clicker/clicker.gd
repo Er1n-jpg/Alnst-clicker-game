@@ -42,7 +42,7 @@ func _process(delta):
 	elif Global.hyunaplush == true:
 		hyunaplushimg.visible = true
 		
-	
+		
 	if Global.guitar == true:
 		guitarimg.visible = true
 	
@@ -82,3 +82,8 @@ func manualrefresh():
 
 func _on_letter_pressed() -> void:
 	get_tree().change_scene_to_file('res://Scenes/Protoypes/letter.tscn')
+
+
+func _on_leaderboard_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Protoypes/leaderboard.tscn")
+	Global.update_value(ivans)	
