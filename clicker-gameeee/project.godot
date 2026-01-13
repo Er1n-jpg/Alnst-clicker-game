@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://Scenes/Protoypes/global.gd"
 SilentWolf="*res://addons/silent_wolf/SilentWolf.gd"
+Scores="*res://addons/silent_wolf/Scores/Scores.gd"
 
 [editor_plugins]
 

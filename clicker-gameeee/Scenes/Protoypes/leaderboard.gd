@@ -8,34 +8,54 @@ var list_index = 0
 var ld_name = "main"
 var max_scores = 10
 
+ 
+
 func _ready() :
 	line_edit.text_submitted.connect(_on_LineEdit_text_entered)
-	var scores = SilentWolf.Scores.scores
-	#var scores = []
-	if ld_name in SilentWolf.Scores.leaderboards:
-		scores = SilentWolf.Scores.leaderboards[ld_name]
-		var local_scores = SilentWolf.Scores.local_scores
+	
 		
 	
-func _on_LineEdit_text_entered(new_text: String) -> void:
-	label.text = "Your name is " + new_text
-	var sw_result: Dictionary = await SilentWolf.Scores.save_score(new_text, Global.ivans).sw_save_score_complete
-	add_item(new_text, str(Global.ivans) )
+func _on_LineEdit_text_entered(playername: String) -> void:
+	label.text = "Your name is " + playername
+	var sw_result: Dictionary = await SilentWolf.Scores.save_score(playername, Global.ivans).sw_save_score_complete
 	my_popup.visible = false
-	loadnewleaderboard()
+	Scores
 
-func add_item(player_name: String, score_value: String) -> void:
-	var item = ScoreItem.instantiate()
-	list_index += 1
-	item.get_node("PlayerName").text = player_name
-	item.get_node("Score").text = score_value
-	item.offset_top = list_index * 100
-	$VBoxContainer.add_child(item)
+func load():
+	scores_container.queue_free_children()
+	SilentWolf.Scores.get_scores(20).sw_get_scores_complete.connect(_on_scores_received)
+	SilentWilf.Scores.sw_get_scores_failed.connect(_on_scores_failed)
+func scoresrecived(scores: Array, names: Array):
 	
+	for i in range(scores.size()):
+		var score_entry: Dictionary = scores[i]
+		
+		var playername = score_entry.get("playername", "N/A")
+		var player_score = score_entry.get("ivans", 0)
+		
+		newlbentry(i+1, playername, player_score)
 
-func loadnewleaderboard():
-	var sw_result: Dictionary = await SilentWolf.Scores.get_scores().sw_get_scores_complete
-	print("Scores: " + str(sw_result.scores)) 
+func newlbentry(rank: int, playername: String, score_data: Dictionary,) -> HBoxContainer:
+	var entry = HBoxContainer.new()
+	entry.size_flags_hoprizontal = Control.SIZE_EXPAND_FILL
+	
+	var rank_label = Label.new()
+	rank_label.text = str(rank) + ":"
+	rank_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	
+	var name_label = Label.new()
+	name_label.text = playername
+	name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	
+	var score_label = Label.new()
+	score_label.text = score_data["player_name"]
+	score_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	
+	entry.add_child(rank_label)
+	entry.add_child(name_label)
+	entry.add_child(score_label)
+	return entry
 	
 func handle_enter_pressed():
 	print("Handling enter press!")

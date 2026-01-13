@@ -85,5 +85,5 @@ func _on_letter_pressed() -> void:
 
 
 func _on_leaderboard_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Protoypes/leaderboard.tscn")
+	get_tree().change_scene_to_file('res://Scenes/Protoypes/leaderboard.tscn')
 	Global.update_value(ivans)	

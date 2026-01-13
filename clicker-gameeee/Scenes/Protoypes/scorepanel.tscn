@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://y4gw1wj5o7jp"]
 
 [node name="Newscoreitem" type="Panel"]
-anchors_preset = -1
 offset_left = -300.0
 offset_top = -61.0
 offset_right = 1.0
