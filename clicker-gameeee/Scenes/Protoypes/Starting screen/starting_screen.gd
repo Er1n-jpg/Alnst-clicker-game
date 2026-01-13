@@ -1,6 +1,7 @@
 extends Control
 var deleteall = true
 
+
 func _ready():
 	SilentWolf.configure({
 	"api_key": "ROqAaJ0G396KunYxW6phW3hkRvCECqTz18yyeSf4",
@@ -14,6 +15,7 @@ func _ready():
 func _on_load_pressed():
 	get_tree().call_group("clicker","load_data")
 	get_tree().change_scene_to_file("res://Scenes/Protoypes/Clicker/clicker.tscn")
+	
 
 
 

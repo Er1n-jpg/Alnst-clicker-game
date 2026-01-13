@@ -53,9 +53,9 @@ metadata/_edit_horizontal_guides_ = [-35.0]
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -7.0
+offset_left = -5.0
 offset_top = -10.0
-offset_right = 1153.0
+offset_right = 1155.0
 offset_bottom = 657.0
 texture = ExtResource("2_agunu")
 script = ExtResource("3_hxwby")
@@ -209,7 +209,15 @@ offset_top = 510.0
 offset_right = 181.0
 offset_bottom = 649.0
 
+[node name="exit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1022.0
+offset_top = 523.0
+offset_right = 1154.0
+offset_bottom = 640.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="SHop" to="." method="_on_s_hop_pressed"]
 [connection signal="pressed" from="Leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

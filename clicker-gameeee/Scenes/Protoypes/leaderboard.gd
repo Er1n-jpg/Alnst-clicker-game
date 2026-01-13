@@ -1,14 +1,15 @@
 extends Control
 @onready var my_popup = $Popup
 @onready var line_edit: LineEdit = $Popup/LineEdit
-@onready var label: Label = $Popup/LineEdit/Label
+@onready var label1: Label = $Popup/Label
+@onready var Scrollcontainer = $Popup/VBoxContainer/ScrollContainer
 const SWLogger = preload("res://addons/silent_wolf/utils/SWLogger.gd")
 const ScoreItem = preload("res://Scenes/Protoypes/scorepanel.tscn")
 var list_index = 0
 var ld_name = "main"
 var max_scores = 10
 
- 
+
 
 func _ready() :
 	line_edit.text_submitted.connect(_on_LineEdit_text_entered)
@@ -16,15 +17,16 @@ func _ready() :
 		
 	
 func _on_LineEdit_text_entered(playername: String) -> void:
-	label.text = "Your name is " + playername
+	label1.text = "Your name is " + playername
 	var sw_result: Dictionary = await SilentWolf.Scores.save_score(playername, Global.ivans).sw_save_score_complete
 	my_popup.visible = false
 	Scores
 
 func load():
-	scores_container.queue_free_children()
-	SilentWolf.Scores.get_scores(20).sw_get_scores_complete.connect(_on_scores_received)
-	SilentWilf.Scores.sw_get_scores_failed.connect(_on_scores_failed)
+	Scrollcontainer.queue_free_children()
+	SilentWolf.Scores.get_scores(20).sw_get_scores_complete.connect(scoresrecived)
+	SilentWolf.Scores.sw_get_scores_failed.connect(loadingfailed)
+	
 func scoresrecived(scores: Array, names: Array):
 	
 	for i in range(scores.size()):
@@ -59,6 +61,10 @@ func newlbentry(rank: int, playername: String, score_data: Dictionary,) -> HBoxC
 	
 func handle_enter_pressed():
 	print("Handling enter press!")
+	
+func loadingfailed(error):
+	label1.text = "failed to load, come back later"
+	
 
 
 func _on_closebutton_pressed() -> void:

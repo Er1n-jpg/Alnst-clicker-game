@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bg54xd1y6hdq7"]
+[gd_scene load_steps=10 format=3 uid="uid://bg54xd1y6hdq7"]
 
 [ext_resource type="Script" uid="uid://53tnrarr4hm4" path="res://Scenes/Protoypes/Starting screen/starting_screen.gd" id="1_dyuuy"]
 [ext_resource type="FontFile" uid="uid://c6riqnnqwhe1v" path="res://fonts/Slow Play.otf" id="2_a0xpd"]
@@ -26,6 +26,8 @@ corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5isxl"]
 
 [node name="Starting screen" type="Control" groups=["mainscreenn"]]
 layout_mode = 3
@@ -71,6 +73,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_1u5yi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dgppl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5isxl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5isxl")
 text = "Play!"
 
 [node name="Label" type="Label" parent="."]

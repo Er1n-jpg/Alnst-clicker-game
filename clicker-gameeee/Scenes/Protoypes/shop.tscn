@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dgacjwr2pw5tm"]
+[gd_scene load_steps=28 format=3 uid="uid://dgacjwr2pw5tm"]
 
 [ext_resource type="Script" uid="uid://dencask1onqcr" path="res://Scenes/Protoypes/shop.gd" id="1_84san"]
 [ext_resource type="FontFile" uid="uid://cfahp5trg3ag2" path="res://fonts/Slow Play.ttf" id="2_apc2c"]
@@ -22,6 +22,8 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o6rmv"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ekjp"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
 corner_radius_top_left = 15
@@ -31,6 +33,8 @@ corner_radius_bottom_left = 15
 shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
 shadow_size = 10
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i7722"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6rmv"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
 corner_radius_top_left = 15
@@ -39,6 +43,8 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
 shadow_size = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edw7u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7722"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
@@ -58,6 +64,10 @@ corner_radius_bottom_left = 15
 shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
 shadow_size = 10
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f87y3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_44u2s"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f87y3"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
 corner_radius_top_left = 15
@@ -66,6 +76,8 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
 shadow_size = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_njm7i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44u2s"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
@@ -76,6 +88,8 @@ corner_radius_bottom_left = 15
 shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
 shadow_size = 10
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l5ji8"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njm7i"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
 corner_radius_top_left = 15
@@ -85,6 +99,8 @@ corner_radius_bottom_left = 15
 shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
 shadow_size = 10
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sta7r"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5ji8"]
 bg_color = Color(0.40784314, 0.6509804, 0.6392157, 1)
 corner_radius_top_left = 15
@@ -93,6 +109,8 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
 shadow_size = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h55yp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sta7r"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -150,6 +168,7 @@ offset_bottom = 197.0
 theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_apc2c")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ovvoy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o6rmv")
 text = "Mizi plush"
 
 [node name="till plush" type="Button" parent="."]
@@ -162,6 +181,7 @@ offset_bottom = 196.0
 theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxFlat_3ekjp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i7722")
 text = "Till plush
 "
 
@@ -173,6 +193,7 @@ offset_right = 356.0
 offset_bottom = 315.0
 theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_o6rmv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edw7u")
 text = "Sua plush"
 
 [node name="luka plush" type="Button" parent="."]
@@ -195,6 +216,7 @@ offset_right = 1069.0
 offset_bottom = 194.0
 theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_edw7u")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f87y3")
 text = "Hyuna plush"
 
 [node name="outfit" type="Button" parent="."]
@@ -203,6 +225,7 @@ offset_left = 804.0
 offset_top = 232.0
 offset_right = 1070.0
 offset_bottom = 309.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_44u2s")
 text = "Omg new outfit
 "
 
@@ -214,6 +237,7 @@ offset_right = 355.0
 offset_bottom = 435.0
 theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_f87y3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_njm7i")
 text = "Guitar??? (Swag option)"
 
 [node name="diet coke" type="Button" parent="."]
@@ -225,6 +249,7 @@ offset_right = 714.0
 offset_bottom = 435.0
 theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_44u2s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5ji8")
 text = "Ivan gets a diet coke"
 
 [node name="multiplier" type="Button" parent="."]
@@ -236,6 +261,7 @@ offset_right = 714.0
 offset_bottom = 557.0
 theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_njm7i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sta7r")
 text = "Ivan multiplier (x2) can stack"
 
 [node name="mimo hat" type="Button" parent="."]
@@ -246,6 +272,7 @@ offset_right = 357.0
 offset_bottom = 562.0
 theme_override_fonts/font = ExtResource("2_apc2c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_l5ji8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h55yp")
 text = "Ivan gets a mimo hat"
 
 [node name="Back" type="Button" parent="."]
@@ -281,6 +308,7 @@ expand_mode = 1
 [connection signal="mouse_exited" from="luka plush" to="." method="_on_luka_plush_mouse_exited"]
 [connection signal="pressed" from="luka plush" to="." method="_on_luka_plush_pressed"]
 [connection signal="mouse_entered" from="Hyuna plush" to="." method="_on_hyuna_plush_mouse_entered"]
+[connection signal="mouse_exited" from="Hyuna plush" to="." method="_on_hyuna_plush_mouse_exited"]
 [connection signal="pressed" from="Hyuna plush" to="." method="_on_hyuna_plush_pressed"]
 [connection signal="mouse_entered" from="outfit" to="." method="_on_outfit_mouse_entered"]
 [connection signal="mouse_exited" from="outfit" to="." method="_on_outfit_mouse_exited"]
