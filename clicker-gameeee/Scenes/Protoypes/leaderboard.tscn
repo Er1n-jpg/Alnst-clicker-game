@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0yxfaaoqwfjs"]
+[gd_scene load_steps=5 format=3 uid="uid://b0yxfaaoqwfjs"]
 
 [ext_resource type="Script" uid="uid://bl2hl6i44gyjd" path="res://Scenes/Protoypes/leaderboard.gd" id="1_6fon2"]
+[ext_resource type="FontFile" uid="uid://c6riqnnqwhe1v" path="res://fonts/Slow Play.otf" id="2_dogim"]
+[ext_resource type="FontFile" uid="uid://cfahp5trg3ag2" path="res://fonts/Slow Play.ttf" id="3_ipj1n"]
+[ext_resource type="FontFile" uid="uid://wuffrwes5yq" path="res://fonts/buse.otf" id="4_5admn"]
 
 [node name="Leaderboard" type="Control"]
 layout_mode = 3
@@ -14,6 +17,17 @@ offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6fon2")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 252.0
+offset_right = 1005.0
+offset_bottom = 397.0
+theme_override_font_sizes/font_size = 35
+text = "Nothing here yet! Come back when there's scores!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -44,61 +58,73 @@ size_flags_vertical = 4
 [node name="Label" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(900, 100)
 layout_mode = 2
-
-[node name="Seperator1" type="HSeparator" parent="VBoxContainer"]
-layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dogim")
 
 [node name="Headings" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(900, 75)
 layout_mode = 2
 size_flags_horizontal = 4
-alignment = 1
+size_flags_vertical = 4
 
 [node name="Rank" type="Label" parent="VBoxContainer/Headings"]
-custom_minimum_size = Vector2(100, 75)
+custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ipj1n")
+theme_override_font_sizes/font_size = 35
+text = "Rank"
+vertical_alignment = 1
 
-[node name="Playername" type="Label" parent="VBoxContainer/Headings"]
+[node name="Name" type="Label" parent="VBoxContainer/Headings"]
 custom_minimum_size = Vector2(450, 75)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ipj1n")
+theme_override_font_sizes/font_size = 35
+text = "Name"
+vertical_alignment = 1
 
-[node name="playerscore" type="Label" parent="VBoxContainer/Headings"]
+[node name="Score" type="Label" parent="VBoxContainer/Headings"]
 custom_minimum_size = Vector2(150, 75)
 layout_mode = 2
-
-[node name="Seperator2" type="HSeparator" parent="VBoxContainer"]
-layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ipj1n")
+theme_override_font_sizes/font_size = 35
+text = "Ivans"
+vertical_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(900, 400)
+custom_minimum_size = Vector2(900, 450)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
 layout_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="."]
-layout_mode = 0
-offset_left = 121.99997
-offset_top = 198.0
-offset_right = 1048.0
-offset_bottom = 202.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-custom_minimum_size = Vector2(900, 500)
-layout_mode = 0
-offset_left = 121.99997
-offset_top = 198.0
-offset_right = 1051.0
-offset_bottom = 564.0
-
-[node name="Rank" type="Label" parent="HBoxContainer"]
+[node name="Playerscores" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(900, 95)
 layout_mode = 2
+alignment = 1
 
-[node name="Playername" type="Label" parent="HBoxContainer"]
+[node name="Playerank" type="Label" parent="VBoxContainer/Playerscores"]
+custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_5admn")
+theme_override_font_sizes/font_size = 35
+text = " 0"
+vertical_alignment = 1
 
-[node name="Playerscore" type="Label" parent="HBoxContainer"]
+[node name="Playername" type="Label" parent="VBoxContainer/Playerscores"]
+custom_minimum_size = Vector2(450, 75)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_5admn")
+theme_override_font_sizes/font_size = 35
+text = "User1"
+vertical_alignment = 1
+
+[node name="Playerscore" type="Label" parent="VBoxContainer/Playerscores"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_5admn")
+theme_override_font_sizes/font_size = 35
+text = "0"
+vertical_alignment = 1
 
 [node name="Errors" type="Label" parent="."]
 layout_mode = 0
@@ -127,6 +153,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_ipj1n")
+theme_override_font_sizes/font_size = 26
 placeholder_text = "Name"
 alignment = 1
 
@@ -139,6 +167,7 @@ offset_top = 6.0
 offset_right = 449.0
 offset_bottom = 89.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_ipj1n")
 theme_override_font_sizes/font_size = 60
 text = "Enter your name!"
 horizontal_alignment = 1

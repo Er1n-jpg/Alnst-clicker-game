@@ -1,9 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://dgacjwr2pw5tm"]
+[gd_scene load_steps=24 format=3 uid="uid://dgacjwr2pw5tm"]
 
 [ext_resource type="Script" uid="uid://dencask1onqcr" path="res://Scenes/Protoypes/shop.gd" id="1_84san"]
 [ext_resource type="FontFile" uid="uid://cfahp5trg3ag2" path="res://fonts/Slow Play.ttf" id="2_apc2c"]
 [ext_resource type="Texture2D" uid="uid://0udxteotvat8" path="res://images/5511dc42747e3bd42b8543fa05c701be.jpg" id="2_o6rmv"]
-[ext_resource type="FontFile" uid="uid://c6riqnnqwhe1v" path="res://fonts/Slow Play.otf" id="3_3ekjp"]
 [ext_resource type="Texture2D" uid="uid://w87067o3p1qf" path="res://images/Untitled166_20260104013451.png" id="4_3ekjp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apc2c"]
@@ -111,16 +110,6 @@ shadow_color = Color(0.47843137, 0.47843137, 0.47843137, 0.6)
 shadow_size = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h55yp"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sta7r"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h55yp"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_color = Color(0.8, 0.8, 0.8, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmgoi"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -275,16 +264,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_l5ji8")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_h55yp")
 text = "Ivan gets a mimo hat"
 
-[node name="Back" type="Button" parent="."]
+[node name="Back" type="TextureButton" parent="."]
 layout_mode = 0
 offset_right = 218.0
 offset_bottom = 81.0
-theme_override_fonts/font = ExtResource("3_3ekjp")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_sta7r")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_h55yp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mmgoi")
-text = "Back :("
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
