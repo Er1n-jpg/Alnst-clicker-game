@@ -22,12 +22,11 @@ func _ready() :
 	
 	playerscorecontainer.hide()
 	
-	
-		
-	
+
 func _on_LineEdit_text_entered(playername: String) -> void:
 	label1.text = "Your name is " + playername
-	var sw_result: Dictionary = await SilentWolf.Scores.save_score(playername, Global.ivans).sw_save_score_complete
+
+
 	my_popup.visible = false
 	
 	loadscores()
