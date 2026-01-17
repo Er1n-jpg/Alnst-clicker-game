@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://opl3eihy2rkq"]
+
+[node name="falling object" type="Sprite2D"]

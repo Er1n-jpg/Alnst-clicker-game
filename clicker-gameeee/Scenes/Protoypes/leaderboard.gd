@@ -22,7 +22,7 @@ func _ready() :
 	
 	playerscorecontainer.hide()
 	
-	loadscores()
+	
 		
 	
 func _on_LineEdit_text_entered(playername: String) -> void:
@@ -30,26 +30,19 @@ func _on_LineEdit_text_entered(playername: String) -> void:
 	var sw_result: Dictionary = await SilentWolf.Scores.save_score(playername, Global.ivans).sw_save_score_complete
 	my_popup.visible = false
 	
+	loadscores()
+	
 
 
 func loadscores():
 
-	if Scrollcontainer == null:
-		print("ERROR: Scrollcontainer is null!")
-		print("Available nodes under Popup:")
-		for child in $Popup.get_children():
-			print("- ", child.name)
-		return  # Exit early
-	
 	for child in Scrollcontainer.get_children():
 		child.queue_free()
 	for child in playerscorecontainer.get_parent().get_children():
 		if child != playerscorecontainer:
 			child.queue_free()
-	
+
 	SilentWolf.Scores.get_scores(10).sw_get_scores_complete.connect(scoresrecived)
-	SilentWolf.Scores.sw_get_scores_failed.connect(loadingfailed)
-	
 func scoresrecived(scores: Array):
 	print ("yay this function works")
 	var parentcontainer = playerscorecontainer.get_parent()

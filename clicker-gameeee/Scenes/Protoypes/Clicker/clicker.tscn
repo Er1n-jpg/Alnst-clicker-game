@@ -185,7 +185,7 @@ stretch_mode = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamPlaylist_b6l8n")
-volume_db = 0.01
+volume_db = -13.867
 script = ExtResource("7_vnmik")
 
 [node name="SHop" type="TextureButton" parent="."]

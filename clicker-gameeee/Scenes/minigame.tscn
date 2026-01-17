@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://nsi85gqplsvt"]
+
+[ext_resource type="PackedScene" uid="uid://qxkgo44blw38" path="res://Scenes/ivansprite.tscn" id="1_ij8rg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ij8rg"]
+size = Vector2(525.6533, 523.3779)
+
+[node name="Minigame" type="Node2D"]
+
+[node name="Ivansprite" parent="." instance=ExtResource("1_ij8rg")]
+position = Vector2(457.50003, 249.75)
+scale = Vector2(0.43945313, 0.39550778)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ivansprite"]
+position = Vector2(-2.2756348, -0.6320801)
+scale = Vector2(1, 0.9999998)
+shape = SubResource("RectangleShape2D_ij8rg")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
